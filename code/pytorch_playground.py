@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import matplotlib.pyplot as plt
 import numpy as np
 # import pandas as pd
@@ -94,6 +96,9 @@ for i, yy in enumerate(ys):
 plt.scatter(x, y, c='k')
 plt.show()
 
+
+t = torch.tensor([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
 # print('model.linear.weight,bias:', model.linear.weight.item(), model.linear.bias.item())
 breakpoint()
 
@@ -112,5 +117,4 @@ if False:
           z = (z / x) * y
 
   print(prf.key_averages().table(sort_by='self_cpu_time_total'))
-
 
