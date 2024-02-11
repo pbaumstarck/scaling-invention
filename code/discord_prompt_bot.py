@@ -43,12 +43,12 @@ def permute(body):
     left -= 1
 
   # TODO: Possibly simplify this.
-  if left == right:
-    # This element is bigger than all, so just swap it with the next in.
-    new_items = items[:-2] + [items[-1], items[-2]]
-  elif left == 0:
+  if left == 0:
     # All elements are sorted in descending or, so reverse them to restart the permutation.
     new_items = list(reversed(items))
+  elif left == right:
+    # This element is bigger than all, so just swap it with the next in.
+    new_items = items[:-2] + [items[-1], items[-2]]
   else:
     # Place the next largest element out front then restart the rest of the elements sorted.
     # E.g., 1 2 4 3 => 1 3 2 4
