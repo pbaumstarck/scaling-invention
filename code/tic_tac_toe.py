@@ -16,7 +16,7 @@ print(board2str(board))
 # ..o
 
 
-# ======
+print('\n# ======\n')
 
 
 def is_final_state(board):
@@ -69,7 +69,7 @@ print(is_final_state([
 # True
 
 
-# ======
+print('\n# ======\n')
 
 
 def next_states(board):
@@ -110,7 +110,7 @@ for next_board in next_states([
 # ..x
 
 
-# ======
+print('\n# ======\n')
 
 
 def dfs(board, valids):
@@ -121,16 +121,15 @@ def dfs(board, valids):
 
 import time
 
-board = [['.'] * 3 for _ in range(3)]
 valids = []
 start_time = time.time()
-dfs(board, valids)
+dfs([['.'] * 3 for _ in range(3)], valids)
 stop_time = time.time()
 print('Num valids:', len(valids), 'took:', stop_time - start_time, 's')
 # Num valids: 549946 took: 5.579200983047485 s
 
 
-# ======
+print('\n# ======\n')
 
 
 def dfs2(board, valids):
@@ -143,16 +142,15 @@ def dfs2(board, valids):
 
 import time
 
-board = [['.'] * 3 for _ in range(3)]
 valids = set()
 start_time = time.time()
-dfs2(board, valids)
+dfs2([['.'] * 3 for _ in range(3)], valids)
 stop_time = time.time()
 print('Num valids:', len(valids), 'took:', stop_time - start_time, 's')
 # Num valids: 5478 took: 0.10553789138793945 s
 
 
-# ======
+print('\n# ======\n')
 
 
 def dfs3(cells, valids):
@@ -160,7 +158,6 @@ def dfs3(cells, valids):
     board = [cells[:3], cells[3:6], cells[6:]]
     if is_valid(board):
       valids.append([row.copy() for row in board])
-
   else:
     dfs3(cells + ['.'], valids)
     dfs3(cells + ['x'], valids)
@@ -176,7 +173,7 @@ print('Valids:', len(valids_exhaustive))
 # Valids: 19683
 
 
-# ======
+print('\n# ======\n')
 
 
 def is_valid(board):
@@ -194,7 +191,7 @@ print('X-O count valids:', len(valids_xo))
 # Valids: 6046
 
 
-# ======
+print('\n# ======\n')
 
 
 def check_wins(board, win):
@@ -245,7 +242,7 @@ print(set(map(board2str, valids_xo_double_win)) - valids)
 # '.xo\nxxo\nx.o', 'xoo\nx.o\nx..', 'oox\n.xx\nxoo', 'o.x\n.xo\nx.o', ...
 
 
-# ======
+print('\n# ======\n')
 
 
 def is_valid(board):
@@ -272,7 +269,7 @@ print('X-O count, fixed win valids:', len(valids_xo_fixed_win))
 # X-O count, fixed win valids: 5478
 
 
-# ======
+print('\n# ======\n')
 
 
 def pos2board(pos):
@@ -282,6 +279,15 @@ def pos2board(pos):
     [c(pos[3]), c(pos[4]), c(pos[5])],
     [c(pos[6]), c(pos[7]), c(pos[8])],
   ]
+
+print(board2str(pos2board([0, 2, 1, 0, 1, 0, 0, 1, 2])))
+# .ox
+# .x.
+# .xo
+
+
+print('\n# ======\n')
+
 
 valid_counting = set()
 for i in range(3 ** 9):
