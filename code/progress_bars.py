@@ -18,12 +18,12 @@ import math
 
 
 def simulate_progress_bar(bar, multi_line=False):
-  for i in [0, 1, 2, 3, 4, 5, 5, 5, 6, 7, 8, 9, 10]:
+  for i in [0, 10, 20, 30, 40, 50, 52, 55, 60, 70, 80, 90, 100]:
     if multi_line:
-      print('Progress', '% 4d%%'% (10 * i))
-      print(bar.progress(i / 10.0))
+      print('Progress', '% 4d%%' % i)
+      print(bar.progress(i / 100.0))
     else:
-      print('Progress', '% 4d%%'% (10 * i), bar.progress(i / 10.0))
+      print('Progress', '% 4d%%' % i, bar.progress(i / 100.0))
 
 
 class ProgressBar(object):
