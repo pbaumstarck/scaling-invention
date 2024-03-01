@@ -368,13 +368,13 @@ $(document).ready(() => {
     );
 
     relativeBoosterChart.render(() => {
-        showLegendStartAnimation(() => {
-            let url = new URL(document.location.href);
-            let startDelay = url.searchParams.get('startDelay') && +url.searchParams.get('startDelay') || 1200;
-            setTimeout(doLoop, startDelay);
-        // }, 2000);
-        // }, 0);
-        });
+        // showLegendStartAnimation(() => {
+        //     let url = new URL(document.location.href);
+        //     let startDelay = url.searchParams.get('startDelay') && +url.searchParams.get('startDelay') || 1200;
+        //     setTimeout(doLoop, startDelay);
+        let url = new URL(document.location.href);
+        let startDelay = url.searchParams.get('startDelay') && +url.searchParams.get('startDelay') || 0; // 1200;
+        setTimeout(doLoop, startDelay);
     });
 
     payloadMassChart.render(() => {});

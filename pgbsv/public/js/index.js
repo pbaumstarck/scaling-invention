@@ -3,6 +3,32 @@ function ProjectsController($scope) {
   this.scope_ = $scope;
   this.scope_.projects = [
   {
+    title: 'Visualizing Gradient Descent',
+    link: 'https://medium.com/towards-data-science/visualizing-gradient-descent-parameters-in-torch-332a63d1e5c5',
+    thumbnail: '/imgs/gradient_descent.png',
+    description: 'Prying behind the interaces of SGD.',
+    tags: ['PyTorch', 'Medium', 'TDS'],
+    links: [{
+      title: 'Medium',
+      link: 'https://medium.com/towards-data-science/visualizing-gradient-descent-parameters-in-torch-332a63d1e5c5'
+    }, {
+      title: 'Source',
+      link: 'https://github.com/pbaumstarck/scaling-invention/blob/main/code/torch_loss.py'
+    }, {
+      title: 'Towards Data Science',
+      link: 'https://towardsdatascience.com/'
+    }]
+   }, {
+    title: 'SpaceX Rockets Visualization',
+    link: '/spacex_rockets.html',
+    thumbnail: '/imgs/spacex_rockets.png',
+    description: 'Visualizing the impact of reusable rockets since the introduction of the Falcon 9.',
+    tags: ['JavaScript', 'Visualization'],
+    links: [{
+      title: 'Source',
+      link: 'https://github.com/pbaumstarck/scaling-invention/blob/main/pgbsv/public/spacex_rockets.html'
+    }]
+  }, {
     title: 'The AlgoRedis Challenge',
     link: 'https://levelup.gitconnected.com/sharpen-your-redis-skills-with-the-algoredis-challenge-01f64fa5da84',
     thumbnail: '/imgs/algoredis.png',
