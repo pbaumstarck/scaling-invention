@@ -1,0 +1,176 @@
+
+html, body {
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.title {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: large;
+  text-align: center;
+}
+
+body > .social {
+  margin-top: 0.4em;
+  text-align: center;
+}
+
+.section {
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.heading-1 {
+  font-weight: bold;
+}
+
+.project {
+/*  background: #eef;*/
+  background: #f8f8ff;
+  display: block;
+  margin: 0.75em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
+  text-align: left;
+  width: 600px;
+/*  width: 48%;*/
+}
+
+.project:hover {
+  background: #ffe;
+}
+
+.project .thumbnail {
+  border: 2px solid #bbd;
+  float: left;
+  /*margin: 0.5em;*/
+  height: 88px;
+  margin-right: 1em;
+  width: 88px;
+}
+
+.project .thumbnail:hover {
+  /*border: 2px solid #ccf;*/
+  border: 2px solid #ffc;
+  /*cursor: pointer;*/
+}
+
+.thumbnail {
+  background-size: contain;
+/*  background-size: cover;*/
+}
+
+/*.nyan-bars .thumbnail {
+  background: #eef url('/imgs/nyan_bars.png') no-repeat center center;
+  background-size: contain;
+}
+
+.solar-system .thumbnail {
+  background: #eef url('/imgs/solar_system.png') no-repeat center center;
+  background-size: contain;
+}
+
+.zson .thumbnail {
+  background: #eef url('/imgs/zson.png') no-repeat center center;
+  background-size: contain;
+}*/
+
+.project .body {
+  display: inline-block;
+  width: 480px;
+}
+
+.project .name {
+  font-weight: bold;
+}
+
+.project .name a,
+.project .name a:active,
+.project .name a:link,
+.project .name a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.project .name a:hover {
+  text-decoration: underline;
+}
+
+.project .description {
+  font-size: small;
+  margin-top: 0.4em;
+}
+
+.tags {
+  font-size: small;
+  margin-top: 0.4em;
+}
+
+.tag {
+  color: #008;
+  cursor: pointer;
+  font-variant: small-caps;
+  margin-right: 0.5em;
+}
+
+.tag.on {
+  color: #00d;
+  /*text-decoration: underline;*/
+}
+
+.tag:hover {
+  color: #00d;
+  text-decoration: underline;
+}
+
+.tag::before {
+  content: "#";
+}
+
+.tags-box .leader {
+  margin-right: 0.5em;
+}
+
+
+.links {
+  font-size: small;
+  margin-top: 0.4em;
+}
+
+.projects-ctrl a,
+.projects-ctrl a:active,
+.projects-ctrl a:link,
+.projects-ctrl a:visited {
+  color: #005;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.projects-ctrl a:hover {
+  color: #33d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.project .social {
+  margin-top: 0.4em;
+}
+
+.copyright {
+  font-size: small;
+  color: #777;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.follow-link {
+  display: block;
+  margin-top: 0.5em;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title>ZSON - Bedizened JSON</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script type="text/javascript" src="/js/zson.js"></script>
+    <script type="text/javascript" src="/js/zson_controller.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="/css/zson.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="title">
+      ZSON &ndash;
+      <span class="non-acronym">Bedi</span><span class="acronym">z</span><span class="non-acronym">ened</span>
+      <span class="non-acronym">J</span><span class="acronym">SON</span>
+    </div>
+    <div class="bedizened-def">
+      be·di·zened&nbsp;&nbsp;/biˈdīzənd/
+      <br>adjective <i>literary</i>
+      <br>1. dressed up or decorated gaudily.
+    </div>
+    <div class="sub-title">
+      Because humanity deserves JSON that supports:
+    </div>
+    <div class="bullets">
+      <span>Comments</span>
+      <span>Multi-line strings</span>
+      <span>Trailing commas</span>
+      <span>Readable numbers</span>
+    </div>
+    <div class="resources">
+      <div><a href="/index.html">
+        Home
+      </a></div>
+      |
+      <!-- <div><a href="http://webronomicon.blogspot.com/2014/03/nyan-bars.html">
+        Blog
+      </a></div>
+      | -->
+      <div><a href="https://github.com/pbaumstarck/ZSON">
+        Source
+      </a></div>
+      |
+      <div><a href="https://github.com/pbaumstarck/ZSON/issues">
+        Bugs
+      </a></div>
+      |
+      <div><a href="https://github.com/pbaumstarck/ZSON/blob/master/README.md">
+        Docs
+      </a></div>
+      |
+      <div><a href="https://github.com/pbaumstarck/ZSON/zipball/master">
+        Download
+      </a></div>
+    </div>
+    <div class="body" ng-controller="ZsonController">
+      <div class="zson-input">
+        <div class="header">
+          ZSON (Try it!)
+        </div>
+        <textarea ng-model="input" rows="40"></textarea>
+      </div>
+      <div class="json-output">
+        <div class="header">
+          Interpreted JSON
+        </div>
+        <textarea class="output" ng-model="output"
+                  ng-class="{'has-error': hasError}" rows="40" readonly></textarea>
+      </div>
+    </div>
+    <script type="text/javascript">
+    setTimeout(function(){
+      // Twitter
+      (function() {
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+      })();
+      // Google+
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    },100);</script>
+  </body>
+</html>
