@@ -22,7 +22,7 @@ function ProjectsController($scope) {
     title: 'SpaceX Rockets Visualization',
     link: '/spacex_rockets.html',
     thumbnail: '/imgs/spacex_rockets.png',
-    description: 'Visualizing the impact of reusable rockets since the introduction of the Falcon 9.',
+    description: 'Visualizing the impact of the reusable Falcon 9 rocket.',
     tags: ['JavaScript', 'Visualization'],
     links: [{
       title: 'Source',
